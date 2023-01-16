@@ -1,8 +1,12 @@
+import Link from "next/link";
 import { getAllProducts, getProductFromSlug } from "@/utils/products"
 
 export default function ProductPage({ product }) {
     return (
-        <div>{product.slug}</div>
+        <div>
+            <p>{product.slug}</p>
+            <Link href="/">Back to home</Link>
+        </div>
     )
 }
 
