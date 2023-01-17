@@ -1,10 +1,11 @@
 import ProductSection from "@/components/ProductSection";
+import HeadingSection from "@/components/HeadingSection";
 import { getAllProducts } from "@/utils/products"
 
 export default function Home({ products }) {
   return (
     <div>
-      <h1>Hello World!</h1>
+      <HeadingSection />
       <ProductSection products={products} />
     </div>
   )
