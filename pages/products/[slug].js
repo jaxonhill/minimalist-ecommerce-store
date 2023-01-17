@@ -1,13 +1,12 @@
 import Link from "next/link";
-import Layout from "@/components/Layout";
 import { getAllProducts, getProductFromSlug } from "@/utils/products"
 
 export default function ProductPage({ product }) {
     return (
-        <Layout>
+        <div>
             <p>{product.slug}</p>
             <Link className="text-blue-400 hover:underline" href="/">Back to home</Link>
-        </Layout>
+        </div>
     )
 }
 

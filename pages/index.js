@@ -1,13 +1,12 @@
-import Layout from "@/components/Layout"
 import ProductSection from "@/components/ProductSection";
 import { getAllProducts } from "@/utils/products"
 
 export default function Home({ products }) {
   return (
-    <Layout>
+    <div>
       <h1>Hello World!</h1>
       <ProductSection products={products} />
-    </Layout>
+    </div>
   )
 }
 
