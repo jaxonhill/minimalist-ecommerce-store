@@ -4,7 +4,7 @@
             "id": 1,
             "title": "Lacoste Men's Green Shirt",
             "category": "shirt",
-            "imgPath": "/public/images/lacoste-shirt.jpg",
+            "imgPath": "/images/lacoste-shirt.jpg",
             "size": "L",
             "price": 35.00
         },
@@ -12,7 +12,7 @@
             "id": 2,
             "title": "Russell Athletic Gray Hoodie",
             "category": "sweatshirt",
-            "imgPath": "/public/images/gray-hoodie.jpg",
+            "imgPath": "/images/gray-hoodie.jpg",
             "size": "L",
             "price": 30.00
         },
@@ -20,7 +20,7 @@
             "id": 3,
             "title": "Guess Men's T-Shirt",
             "category": "shirt",
-            "imgPath": "/public/images/guess-shirt.jpg",
+            "imgPath": "/images/guess-shirt.jpg",
             "size": "XL",
             "price": 40.00
         },
@@ -28,7 +28,7 @@
             "id": 4,
             "title": "Lakers Vintage Shirt",
             "category": "shirt",
-            "imgPath": "/public/images/lakers-shirt.jpg",
+            "imgPath": "/images/lakers-shirt.jpg",
             "size": "S",
             "price": 25.00
         },
@@ -36,7 +36,7 @@
             "id": 5,
             "title": "Tultex Men's Navy Hoodie",
             "category": "sweatshirt",
-            "imgPath": "/public/images/blue-hoodie.jpg",
+            "imgPath": "/images/blue-hoodie.jpg",
             "size": "L",
             "price": 25.00
         },
@@ -44,7 +44,7 @@
             "id": 6,
             "title": "Tommy Hilfiger Men's Shirt",
             "category": "shirt",
-            "imgPath": "/public/images/hilfiger-shirt.jpg",
+            "imgPath": "/images/hilfiger-shirt.jpg",
             "size": "XL",
             "price": 20.00
         },
@@ -52,7 +52,7 @@
             "id": 7,
             "title": "Nike Men's Navy and Silver Shorts",
             "category": "shorts",
-            "imgPath": "/public/images/blue-nike-shorts.jpg",
+            "imgPath": "/images/blue-nike-shorts.jpg",
             "size": "L",
             "price": 20.00
         },
@@ -60,7 +60,7 @@
             "id": 8,
             "title": "Green Men's Champion Shorts",
             "category": "shorts",
-            "imgPath": "/public/images/green-champion-shorts.jpg",
+            "imgPath": "/images/green-champion-shorts.jpg",
             "size": "L",
             "price": 30.00
         },
@@ -68,7 +68,7 @@
             "id": 9,
             "title": "Vintage Merritt College Men's Shorts",
             "category": "shorts",
-            "imgPath": "/public/images/merritt-shorts.jpg",
+            "imgPath": "/images/merritt-shorts.jpg",
             "size": "M",
             "price": 25.00
         },
@@ -76,7 +76,7 @@
             "id": 10,
             "title": "Russell Athletic Men's Navy Shorts",
             "category": "shorts",
-            "imgPath": "/public/images/russell-shorts.jpg",
+            "imgPath": "/images/russell-shorts.jpg",
             "size": "M",
             "price": 20.00
         },
@@ -84,7 +84,7 @@
             "id": 11,
             "title": "Russell Athletic Men's Navy Sweatshorts",
             "category": "shorts",
-            "imgPath": "/public/images/russell-sweat-shorts.jpg",
+            "imgPath": "/images/russell-sweat-shorts.jpg",
             "size": "L",
             "price": 25.00
         },
@@ -92,7 +92,7 @@
             "id": 12,
             "title": "Vintage Tan Carhartt Hat",
             "category": "hat",
-            "imgPath": "/public/images/carhartt-hat.jpg",
+            "imgPath": "/images/carhartt-hat.jpg",
             "size": "OS",
             "price": 20.00
         },
@@ -100,7 +100,7 @@
             "id": 13,
             "title": "Vintage Fire Station Hat",
             "category": "hat",
-            "imgPath": "/public/images/fire-station-hat.jpg",
+            "imgPath": "/images/fire-station-hat.jpg",
             "size": "OS",
             "price": 15.00
         },
@@ -108,7 +108,7 @@
             "id": 14,
             "title": "Vintage Red Sox Fitted Hat",
             "category": "hat",
-            "imgPath": "/public/images/red-sox-hat.jpg",
+            "imgPath": "/images/red-sox-hat.jpg",
             "size": "OS",
             "price": 40.00
         },
@@ -116,7 +116,7 @@
             "id": 15,
             "title": "Vintage Minnesota Vikings Fitted Hat",
             "category": "hat",
-            "imgPath": "/public/images/vikings-hat.jpg",
+            "imgPath": "/images/vikings-hat.jpg",
             "size": "OS",
             "price": 35.00
         },

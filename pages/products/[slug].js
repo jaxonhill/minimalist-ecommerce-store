@@ -1,10 +1,12 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getAllProducts, getProductFromSlug } from "@/utils/products"
 
 export default function ProductPage({ product }) {
     return (
         <div>
             <p>{product.slug}</p>
+            <Image src={product.imgPath} width={500} height={500} alt={product.title} priority />
             <Link className="text-blue-400 hover:underline" href="/">Back to home</Link>
         </div>
     )
