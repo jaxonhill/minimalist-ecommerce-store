@@ -32,6 +32,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
+    // Get the one product we want - based on the slug
     const slug = params.slug
     const product = getProductFromSlug(slug);
     return {

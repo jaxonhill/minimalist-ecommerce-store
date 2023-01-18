@@ -12,7 +12,7 @@ export default function Searchbar({ searchText, setSearchText }) {
                 onChange={(e) => setSearchText(e.target.value)}
                 id="search"
                 name="search"
-                className="placeholder:text-gray-400 focus:outline-0"
+                className="w-full placeholder:text-gray-400 focus:outline-0"
                 type="text"
                 placeholder="Search"
                 autoComplete="off"
