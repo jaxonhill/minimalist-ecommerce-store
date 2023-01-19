@@ -1,3 +1,5 @@
+import FilterButton from "./FilterButton"
+
 export default function ClickableFiltersSection() {
     return (
         <div className="flex flex-col gap-20">
@@ -6,10 +8,10 @@ export default function ClickableFiltersSection() {
                     <h2 className="font-bold text-gray-400 tracking-[0.17em]">CLOTHING</h2>
                 </div>
                 <div className="flex flex-col pt-4 gap-4">
-                    <button className="text-gray-600 bg-transparent">Shirts</button>
-                    <button className="text-gray-600 bg-transparent">Sweatshirts</button>
-                    <button className="text-gray-600 bg-transparent">Shorts</button>
-                    <button className="text-gray-600 bg-transparent">Hats</button>
+                    <FilterButton filterOptionText="Shirts" />
+                    <FilterButton filterOptionText="Sweatshirts" />
+                    <FilterButton filterOptionText="Shorts" />
+                    <FilterButton filterOptionText="Hats" />
                 </div>
             </div>
             <div>
@@ -17,11 +19,11 @@ export default function ClickableFiltersSection() {
                     <h2 className="font-bold text-gray-400 tracking-[0.17em]">SIZE</h2>
                 </div>
                 <div className="flex flex-col pt-4 gap-4">
-                    <button className="text-gray-600 bg-transparent">Small</button>
-                    <button className="text-gray-600 bg-transparent">Medium</button>
-                    <button className="text-gray-600 bg-transparent">Large</button>
-                    <button className="text-gray-600 bg-transparent">Extra Large</button>
-                    <button className="text-gray-600 bg-transparent">One Size</button>
+                    <FilterButton filterOptionText="Small" />
+                    <FilterButton filterOptionText="Medium" />
+                    <FilterButton filterOptionText="Large" />
+                    <FilterButton filterOptionText="Extra Large" />
+                    <FilterButton filterOptionText="One Size" />
                 </div>
             </div>
         </div>
