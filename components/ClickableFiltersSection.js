@@ -20,12 +20,10 @@ export default function ClickableFiltersSection() {
                 <div className="border-b-2 border-b-gray-200 pb-1">
                     <h2 className="font-bold text-gray-400 tracking-[0.17em]">SIZE</h2>
                 </div>
-                <div className="flex flex-col pt-4 gap-4">
-                    <FilterButton filterOptionText="Small" />
-                    <FilterButton filterOptionText="Medium" />
-                    <FilterButton filterOptionText="Large" />
-                    <FilterButton filterOptionText="Extra Large" />
-                    <FilterButton filterOptionText="One Size" />
+                <div className="flex flex-col pt-4 gap-3">
+                    {SIZES.map((size, index) => {
+                        return <FilterButton key={index} filterOptionText={size} />
+                    })}
                 </div>
             </div>
         </div>
