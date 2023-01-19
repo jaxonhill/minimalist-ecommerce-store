@@ -6,13 +6,14 @@ import { useState } from "react";
 
 export default function Home({ products }) {
   const [searchText, setSearchText] = useState("");
+  const [sideFilters, setSideFilters] = useState(null);
 
   return (
-    <div className="grid grid-cols-5 gap-8">
-      <ClickableFiltersSection />
+    <div className="grid grid-rows-2 grid-cols-5 gap-8">
+      <ClickableFiltersSection sideFilters={sideFilters} setSideFilters={setSideFilters} />
       <div className="col-span-4">
         <HeadingSection searchText={searchText} setSearchText={setSearchText} />
-        <ProductSection products={products} searchText={searchText} />
+        <ProductSection products={products} searchText={searchText} sideFilters={sideFilters} />
       </div>
     </div>
   )

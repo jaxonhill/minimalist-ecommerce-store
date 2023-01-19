@@ -51,7 +51,7 @@
         {
             "id": 7,
             "title": "Nike Men's Navy and Silver Shorts",
-            "category": "shorts",
+            "category": "short",
             "imgPath": "/images/blue-nike-shorts.jpg",
             "size": "L",
             "price": 20.00
@@ -59,7 +59,7 @@
         {
             "id": 8,
             "title": "Green Men's Champion Shorts",
-            "category": "shorts",
+            "category": "short",
             "imgPath": "/images/green-champion-shorts.jpg",
             "size": "L",
             "price": 30.00
@@ -67,7 +67,7 @@
         {
             "id": 9,
             "title": "Vintage Merritt College Men's Shorts",
-            "category": "shorts",
+            "category": "short",
             "imgPath": "/images/merritt-shorts.jpg",
             "size": "M",
             "price": 25.00
@@ -75,7 +75,7 @@
         {
             "id": 10,
             "title": "Russell Athletic Men's Navy Shorts",
-            "category": "shorts",
+            "category": "short",
             "imgPath": "/images/russell-shorts.jpg",
             "size": "M",
             "price": 20.00
@@ -83,7 +83,7 @@
         {
             "id": 11,
             "title": "Russell Athletic Men's Navy Sweatshorts",
-            "category": "shorts",
+            "category": "short",
             "imgPath": "/images/russell-sweat-shorts.jpg",
             "size": "L",
             "price": 25.00

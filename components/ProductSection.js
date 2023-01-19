@@ -1,14 +1,20 @@
 import ProductCard from "./ProductCard"
+import { isFilterMatch } from "@/utils/products";
 
-export default function ProductSection({ products, searchText }) {
+export default function ProductSection({ products, searchText, sideFilters }) {
 
-    // Create products to display by filtering products by the search input text
-    // TODO: Create more complex function and import it when you have to also filter by
-    //       the sidebar filters
+    // Create products to display by filtering products by the search input text and side filters
     const productsToDisplay = products.filter((product) => {
+        // Make the titles lowercase and space slugs for easier searching
         const productTitle = product.title.toLowerCase();
         const productSlugSpaced = product.slug.toLowerCase().split("-").join(" ");
-        return (productTitle.includes(searchText) || productSlugSpaced.includes(searchText));
+
+        // Create some sort of condition (isInSideFilter) and create another isInSearch
+        let isInSideFilter = isFilterMatch(product, sideFilters)
+        let isInSearch = (productTitle.includes(searchText) || productSlugSpaced.includes(searchText))
+
+
+        return isInSideFilter && isInSearch;
     })
 
     return (
