@@ -28,3 +28,7 @@ export function getProductFromSlug(slug) {
     })[0];
     return productToReturn;
 }
+
+export function formatPriceWithDecimals(price) {
+    return price.toFixed(2);
+}
