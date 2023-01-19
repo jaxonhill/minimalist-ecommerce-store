@@ -1,5 +1,8 @@
 import FilterButton from "./FilterButton"
 
+const CLOTHING_TYPES = ["Shirts", "Sweatshirts", "Shorts", "Hats"]
+const SIZES = ["Small", "Medium", "Large", "Extra Large", "One Size"]
+
 export default function ClickableFiltersSection() {
     return (
         <div className="flex flex-col gap-20">
@@ -8,10 +11,9 @@ export default function ClickableFiltersSection() {
                     <h2 className="font-bold text-gray-400 tracking-[0.17em]">CLOTHING</h2>
                 </div>
                 <div className="flex flex-col pt-4 gap-4">
-                    <FilterButton filterOptionText="Shirts" />
-                    <FilterButton filterOptionText="Sweatshirts" />
-                    <FilterButton filterOptionText="Shorts" />
-                    <FilterButton filterOptionText="Hats" />
+                    {CLOTHING_TYPES.map((type, index) => {
+                        return <FilterButton key={index} filterOptionText={type} />
+                    })}
                 </div>
             </div>
             <div>

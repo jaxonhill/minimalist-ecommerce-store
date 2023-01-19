@@ -12,7 +12,7 @@ export default function ProductSection({ products, searchText }) {
     })
 
     return (
-        <div className="w-full grid grid-cols-3 gap-4 mt-8">
+        <div className="w-full grid grid-cols-3 gap-6 mt-8">
             {productsToDisplay.map(product => <ProductCard key={product.id} product={product} />)}
         </div>
     )
