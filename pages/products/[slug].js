@@ -2,8 +2,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { getAllProducts, getProductFromSlug, formatPriceWithDecimals } from "@/utils/products"
 
-export default function ProductPage({ product }) {
+export default function ProductPage({ product, cartItems, setCartItems }) {
     const priceWithDecimals = formatPriceWithDecimals(product.price);
+
+    function handleAddToCart() {
+        setCartItems([...cartItems, product]);
+    }
 
     return (
         <div>
@@ -20,7 +24,7 @@ export default function ProductPage({ product }) {
                             <p className="font-bold text-5xl">${priceWithDecimals}</p>
                             <p className="font-bold text-5xl">{product.size}</p>
                         </div>
-                        <button className="bg-gray-800 text-white w-full rounded-2xl py-4 text-2xl font-medium hover:bg-gray-700">Add to cart</button>
+                        <button onClick={handleAddToCart} className="bg-gray-800 text-white w-full rounded-2xl py-4 text-2xl font-medium hover:bg-gray-700">Add to cart</button>
                     </div>
                     <Link className="self-end gap-4 flex items-center justify-between bg-white rounded-2xl text-2xl py-4 px-6 font-medium shadow hover:bg-gray-200" href="/">
                         <p className="text-center">Back to home</p>

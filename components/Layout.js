@@ -1,9 +1,9 @@
 import Navbar from "./Navbar"
 
-export default function Layout({ children }) {
+export default function Layout({ children, cartItems }) {
     return (
         <main className="mx-40 my-8">
-            <Navbar />
+            <Navbar cartItems={cartItems} />
             {children}
         </main>
     )
