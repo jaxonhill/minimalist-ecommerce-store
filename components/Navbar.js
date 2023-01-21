@@ -1,7 +1,9 @@
+import Link from "next/link"
+
 export default function Navbar() {
     return (
         <nav className="w-full flex justify-between items-center mb-16">
-            <p><strong>timeless</strong>threads</p>
+            <Link href="/"><p><strong>timeless</strong>threads</p></Link>
             <button>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M8 12L8 8C8 5.79086 9.79086 4 12 4V4C14.2091 4 16 5.79086 16 8L16 12" stroke="#1F2937" strokeWidth="2" strokeLinecap="round" />
