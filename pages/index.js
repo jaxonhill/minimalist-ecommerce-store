@@ -10,7 +10,7 @@ export default function Home() {
         and dynamic routing. It is also built using TailwindCSS.
       </p>
       <Link href="/products">
-        <button className="rounded-2xl py-4 px-16 bg-gray-800 text-white text-2xl hover:bg-gray-700">Go to products</button>
+        <button className="rounded-2xl py-4 px-16 bg-gray-800 text-white text-2xl hover:bg-gray-700">Shop Now</button>
       </Link>
     </div>
   )
