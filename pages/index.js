@@ -7,7 +7,8 @@ export default function Home() {
       <p className="max-w-5xl text-3xl text-gray-600 text-center mb-16">
         This is a fake eCommerce vintage store I built to learn
         and utilize crucial features of NextJS like Static Generation
-        and dynamic routing. It is also built using TailwindCSS.
+        and dynamic routing. It is also built using TailwindCSS. Images
+        are from Depop.
       </p>
       <Link href="/products">
         <button className="rounded-2xl py-4 px-16 bg-gray-800 text-white text-2xl hover:bg-gray-700">Shop Now</button>
