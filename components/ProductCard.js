@@ -3,10 +3,10 @@ import Image from "next/image";
 
 export default function ProductCard({ product }) {
     return (
-        <Link className="group" href={`/products/${encodeURIComponent(product.slug)}`}>
+        <Link className="group max-w-xl" href={`/products/${encodeURIComponent(product.slug)}`}>
             <div className="bg-white rounded-2xl shadow overflow-hidden group-hover:brightness-90" key={product.id}>
                 <div className="aspect-square w-full relative">
-                    <Image src={product.imgPath} alt={product.title} fill className="object-contain" />
+                    <Image src={product.imgPath} alt={product.title} className="object-contain" fill sizes="(max-width: 800px)" priority />
                 </div>
                 <div className="p-4 text-xl">
                     <p className="text-gray-700 w-full font-bold truncate pb-2">{product.title}</p>
