@@ -17,6 +17,8 @@ export default function ProductSection({ products, searchText, sideFilters }) {
         return isInSideFilter && isInSearch;
     })
 
+    // TODO: Add text that pops up if no products are displayed
+
     return (
         <div className="w-full grid grid-cols-3 gap-6 mt-8">
             {productsToDisplay.map(product => <ProductCard key={product.id} product={product} />)}

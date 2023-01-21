@@ -1,4 +1,6 @@
 export default function FilterButton({ sideFilters, setSideFilters, filterOptionText, filterCategory }) {
+    const isSelected = checkIsSelected();
+
     function handleFilterSelect() {
         // Check if null
         if (!sideFilters) {
@@ -15,17 +17,43 @@ export default function FilterButton({ sideFilters, setSideFilters, filterOption
             }
         } else {
             if (filterCategory === "Clothing") {
-                setSideFilters({ ...sideFilters, clothing: filterOptionText });
+                if (sideFilters.clothing === filterOptionText) {
+                    setSideFilters({ ...sideFilters, clothing: null });
+                } else {
+                    setSideFilters({ ...sideFilters, clothing: filterOptionText });
+                }
             } else {
-                setSideFilters({ ...sideFilters, size: filterOptionText });
+                if (sideFilters.size === filterOptionText) {
+                    setSideFilters({ ...sideFilters, size: null });
+                } else {
+                    setSideFilters({ ...sideFilters, size: filterOptionText });
+                }
             }
         }
+    }
+
+
+    function checkIsSelected() {
+        // Check that sideFilters is not null
+        if (sideFilters) {
+            // Using && sideFilters.clothing because this could individually be null
+            if (filterCategory === "Clothing" && sideFilters.clothing) {
+                return filterOptionText === sideFilters.clothing;
+            }
+
+            // Using && sideFilters.size because this could individually be null
+            if (filterCategory === "Size" && sideFilters.size) {
+                return filterOptionText === sideFilters.size;
+            }
+        }
+
+        return false;
     }
 
     // TODO: Add an isSelected to change the look when a filter is selected
     // TODO: Add ability to uncheck a filter by clicking it again, right now it only remains active
 
     return (
-        <button onClick={handleFilterSelect} className="text-gray-600 bg-transparent py-1 text-left hover:text-blue-300">{filterOptionText}</button>
+        <button onClick={handleFilterSelect} className={`${isSelected ? 'text-blue-400' : 'text-gray-600'} text-gray-600 bg-transparent py-1 text-left hover:text-blue-300`}>{filterOptionText}</button>
     )
 }
