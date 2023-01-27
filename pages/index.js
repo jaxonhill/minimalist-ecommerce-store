@@ -2,9 +2,9 @@ import Link from "next/link"
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center pt-12">
-      <h1 className="font-bold text-5xl mb-4">Welcome to timelessthreads!</h1>
-      <p className="max-w-5xl text-3xl text-gray-600 text-center mb-16">
+    <div className="flex flex-col md:items-center md:pt-12">
+      <h1 className="font-bold mb-4 text-4xl md:text-5xl">Welcome to timelessthreads!</h1>
+      <p className="max-w-5xl text-gray-600 text-xl mb-8 leading-relaxed md:leading-snug md:text-3xl md:text-center md:mb-12">
         This is a fake eCommerce vintage store I built to learn
         and utilize crucial features of NextJS like Static Generation
         and dynamic routing. It is also built using TailwindCSS. Images
