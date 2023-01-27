@@ -6,7 +6,29 @@ export default function ProductPage({ product, cartItems, setCartItems }) {
     const priceWithDecimals = formatPriceWithDecimals(product.price);
 
     function handleAddToCart() {
-        setCartItems([...cartItems, product]);
+        let isFound = false;
+
+        if (cartItems.length <= 0) {
+            setCartItems([{ ...product, quantity: 1 }]);
+            return;
+        }
+
+        const newItems = cartItems.map((item) => {
+            // If an item in the cart matches one we just added
+            if (item.slug === product.slug) {
+                // Increase its quantity and say it is found
+                isFound = true;
+                return { ...item, quantity: item.quantity + 1 }
+            }
+            return item;
+        })
+
+        // If the item was found, then set cartItems to the new items
+        if (isFound) {
+            setCartItems(newItems);
+        } else {    // Else, set it to all previous cart items and the new one
+            setCartItems([...cartItems, { ...product, quantity: 1 }]);
+        }
     }
 
     return (

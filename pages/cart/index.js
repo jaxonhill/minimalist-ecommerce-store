@@ -34,7 +34,7 @@ export default function CheckoutPage({ cartItems, setCartItems }) {
                                     </div>
                                     <div className="flex gap-3">
                                         <button className="px-1">-</button>
-                                        <p>2</p>
+                                        <p>{item.quantity}</p>
                                         <button className="px-1">+</button>
                                     </div>
                                 </div>
