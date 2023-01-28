@@ -1,7 +1,18 @@
 import FilterButton from "./FilterButton"
+import { motion } from "framer-motion"
 
 const CLOTHING_TYPES = ["Shirts", "Sweatshirts", "Shorts", "Hats"]
 const SIZES = ["S", "M", "L", "XL", "OS"]
+
+const staggerDiv = {
+    hidden: {},
+    show: {
+        transition: {
+            delayChildren: 0.25,
+            staggerChildren: 0.1,
+        }
+    }
+}
 
 export default function ClickableFiltersSection({ sideFilters, setSideFilters, isShowingFilters, setIsShowingFilters }) {
 
@@ -16,7 +27,12 @@ export default function ClickableFiltersSection({ sideFilters, setSideFilters, i
                     <div className="border-b-2 border-b-gray-200 pb-1">
                         <h2 className="font-bold text-gray-400 tracking-[0.17em]">CLOTHING</h2>
                     </div>
-                    <div className="flex flex-col pt-4 gap-4">
+                    <motion.div
+                        variants={staggerDiv}
+                        initial="hidden"
+                        animate="show"
+                        className="flex flex-col pt-4 gap-4"
+                    >
                         {CLOTHING_TYPES.map((type, index) => {
                             return <FilterButton
                                 sideFilters={sideFilters}
@@ -26,13 +42,18 @@ export default function ClickableFiltersSection({ sideFilters, setSideFilters, i
                                 filterCategory="Clothing"
                             />
                         })}
-                    </div>
+                    </motion.div>
                 </div>
                 <div className="w-full">
                     <div className="border-b-2 border-b-gray-200 pb-1">
                         <h2 className="text-end font-bold text-gray-400 tracking-[0.17em] xl:text-start">SIZE</h2>
                     </div>
-                    <div className="flex flex-col items-end pt-4 gap-3 xl:items-start">
+                    <motion.div
+                        variants={staggerDiv}
+                        initial="hidden"
+                        animate="show"
+                        className="flex flex-col items-end pt-4 gap-3 xl:items-start"
+                    >
                         {SIZES.map((size, index) => {
                             return <FilterButton
                                 sideFilters={sideFilters}
@@ -42,7 +63,7 @@ export default function ClickableFiltersSection({ sideFilters, setSideFilters, i
                                 filterCategory="Size"
                             />
                         })}
-                    </div>
+                    </motion.div>
                 </div>
             </div>
             {isShowingFilters

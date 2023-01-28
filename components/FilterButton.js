@@ -1,3 +1,10 @@
+import { motion } from "framer-motion";
+
+const itemStagger = {
+    hidden: { opacity: 0, scale: 0.1, y: -50 },
+    show: { opacity: 1, scale: 1.0, y: 0 }
+}
+
 export default function FilterButton({ sideFilters, setSideFilters, filterOptionText, filterCategory }) {
     const isSelected = checkIsSelected();
 
@@ -54,6 +61,6 @@ export default function FilterButton({ sideFilters, setSideFilters, filterOption
     // TODO: Add ability to uncheck a filter by clicking it again, right now it only remains active
 
     return (
-        <button onClick={handleFilterSelect} className={`${isSelected ? 'text-blue-400' : 'text-gray-600'} text-gray-600 bg-transparent py-1 text-left hover:text-blue-300`}>{filterOptionText}</button>
+        <motion.button variants={itemStagger} onClick={handleFilterSelect} className={`${isSelected ? 'text-blue-400' : 'text-gray-600'} text-gray-600 bg-transparent py-1 text-left hover:text-blue-300`}>{filterOptionText}</motion.button>
     )
 }

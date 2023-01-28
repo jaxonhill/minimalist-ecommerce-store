@@ -1,5 +1,16 @@
 import ProductCard from "./ProductCard"
 import { isFilterMatch } from "@/utils/products";
+import { motion } from "framer-motion";
+
+const staggerDiv = {
+    hidden: {},
+    show: {
+        transition: {
+            delayChildren: 0.25,
+            staggerChildren: 0.1,
+        }
+    }
+}
 
 export default function ProductSection({ products, searchText, sideFilters }) {
 
@@ -20,8 +31,13 @@ export default function ProductSection({ products, searchText, sideFilters }) {
     // TODO: Add text that pops up if no products are displayed
 
     return (
-        <div className="w-full grid grid-cols-1 gap-6 mt-8 sm:grid-cols-2 md:grid-cols-3">
+        <motion.div
+            variants={staggerDiv}
+            initial="hidden"
+            animate="show"
+            className="w-full grid grid-cols-1 gap-6 mt-8 sm:grid-cols-2 md:grid-cols-3"
+        >
             {productsToDisplay.map(product => <ProductCard key={product.id} product={product} />)}
-        </div>
+        </motion.div>
     )
 }
