@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { motion } from "framer-motion";
+import Head from "next/head";
 
 const staggerDiv = {
     hidden: {},
@@ -48,6 +49,9 @@ export default function CheckoutPage({ cartItems, setCartItems }) {
                 animate={{ opacity: 1, y: 0 }}
                 className="flex flex-col items-center gap-8"
             >
+                <Head>
+                    <title>Cart empty</title>
+                </Head>
                 <h1 className="text-center font-bold text-5xl pt-16">Your cart is empty!</h1>
                 <Link href="/products">
                     <motion.button
@@ -63,6 +67,9 @@ export default function CheckoutPage({ cartItems, setCartItems }) {
             <motion.div
                 className="flex flex-col"
             >
+                <Head>
+                    <title>Cart ({cartItems.length})</title>
+                </Head>
                 <motion.ul
                     variants={staggerDiv}
                     initial="hidden"

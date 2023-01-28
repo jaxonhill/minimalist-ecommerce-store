@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { getAllProducts, getProductFromSlug, formatPriceWithDecimals } from "@/utils/products"
 import { motion } from "framer-motion";
+import Head from "next/head";
 
 export default function ProductPage({ product, cartItems, setCartItems }) {
     const priceWithDecimals = formatPriceWithDecimals(product.price);
@@ -34,6 +35,9 @@ export default function ProductPage({ product, cartItems, setCartItems }) {
 
     return (
         <motion.div initial={{ opacity: 0.1, y: -100 }} animate={{ opacity: 1.0, y: 0 }}>
+            <Head>
+                <title>{product.title}</title>
+            </Head>
             <header className="mb-4 md:mb-12">
                 <h1 className="font-bold text-3xl md:text-5xl">{product.title}</h1>
             </header>
