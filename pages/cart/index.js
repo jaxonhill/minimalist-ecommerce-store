@@ -1,5 +1,4 @@
 import Link from "next/link"
-import Image from "next/image"
 
 export default function CheckoutPage({ cartItems, setCartItems }) {
     const handleDecrease = (item) => {
@@ -35,8 +34,8 @@ export default function CheckoutPage({ cartItems, setCartItems }) {
                 </Link>
             </div>
             :
-            <div>
-                <ul className="flex flex-col gap-6">
+            <div className="flex flex-col">
+                <ul className="flex flex-col gap-6 md:grid md:grid-cols-2 xl:grid-cols-3">
                     {cartItems.map((item) => {
                         return (
                             <article key={item.slug} className="p-4 bg-white shadow rounded-2xl">
@@ -69,6 +68,9 @@ export default function CheckoutPage({ cartItems, setCartItems }) {
                         )
                     })}
                 </ul>
+                <Link className="self-center fixed bottom-8 md:bottom-16 xl:bottom-32" href="/checkout">
+                    <button className="rounded-2xl py-4 px-16 bg-gray-800 text-white text-2xl hover:bg-gray-700">Checkout</button>
+                </Link>
             </div>
     )
 }
