@@ -2,9 +2,11 @@ import Navbar from "./Navbar"
 
 export default function Layout({ children, cartItems }) {
     return (
-        <main className="mx-4 lg:mx-32 my-8">
+        <div>
             <Navbar cartItems={cartItems} />
-            {children}
-        </main>
+            <main className="mx-4 lg:mx-32 mb-8">
+                {children}
+            </main>
+        </div>
     )
 }
