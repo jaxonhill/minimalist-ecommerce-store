@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 export default function Home() {
   return (
     <motion.div
-      initial={{ opacity: 0, y: -200 }}
+      initial={{ opacity: 0, y: -100 }}
       animate={{ opacity: 1, y: 0 }}
       className="flex flex-col md:items-center md:pt-12"
     >
@@ -18,6 +18,7 @@ export default function Home() {
       <Link href="/products">
         <motion.button
           whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
           className="rounded-2xl py-4 px-16 bg-gray-800 text-white text-2xl hover:bg-gray-700"
         >
           Shop Now

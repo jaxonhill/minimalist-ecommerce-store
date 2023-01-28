@@ -7,9 +7,9 @@ const itemStagger = {
     show: { opacity: 1, scale: 1.0 }
 }
 
-export default function ProductCard({ product }) {
+export default function ProductCard({ product, keyID }) {
     return (
-        <motion.article variants={itemStagger}>
+        <motion.article variants={itemStagger} key={keyID} exit={{ opacity: 0 }}>
             <Link className="group max-w-xl" href={`/products/${encodeURIComponent(product.slug)}`}>
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="bg-white rounded-2xl shadow overflow-hidden group-hover:brightness-90" key={product.id}>
                     <div className="aspect-square w-full relative">
